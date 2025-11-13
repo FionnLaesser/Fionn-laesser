@@ -38,20 +38,22 @@
 </head>
 
 <body>
+  <div id="pageCounter" class="page-counter">Lädt…</div>
   <header>
     <div class="wrap nav" id="nav">
       <a class="brand" href="index.html">
         <img src="images/profil.jpg" class="logo" alt="Profilbild" >
         Fionn
       </a>
-      <nav class="navlinks" aria-label="Hauptnavigation">
+      <nav class="navlinks">
         <a href="ueber.html">Über mich</a>
         <a href="erfahrung.html">Erfahrung</a>
         <a href="projekte.html">Projekte</a>
         <a href="skills.html">Skills</a>
         <a href="hobbys.html">Hobbys</a>
-        <a href="kontakt.html" aria-current="page">Kontakt</a>
         <a href="module.html">Module</a>
+        <a href="react.html">React</a>
+        <a href="kontakt.html">Kontakt</a>
       </nav>
       <button type="button" class="menu-toggle" aria-controls="nav" aria-expanded="false"
         onclick="document.getElementById('nav').classList.toggle('open'); this.setAttribute('aria-expanded', document.getElementById('nav').classList.contains('open'));">
@@ -66,8 +68,8 @@
         <h1>Kontakt</h1>
       </div>
       <div class="card">
-        <p><strong>Email:</strong> <a href="mailto:flaesser@bluewin.ch">flaesser@bluewin.ch</a></p>
-        <p><strong>Telefon:</strong> +41 77 534 97 48</p>
+        <p><strong>Email: </strong><a href="mailto:flaesser@bluewin.ch ">flaesser@bluewin.ch</a></p>
+        <p><strong>Telefon:</strong> Auf anfrage</p>
         <p><strong>Vor- und Nachname:</strong> Fionn Lässer</p>
         <address>
           <p><strong>Adresse:</strong><br>
@@ -135,6 +137,7 @@
       }
     });
   </script>
+  <script src="javascripts/counter.js"></script>
 </body>
 
 </html>

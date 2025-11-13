@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mini-Projekt – Aufgabenliste</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#CE1126">
+</head>
+
+<body>
+    <div id="pageCounter" class="page-counter">Lädt…</div>
+  <!-- NAV -->
+  <header>
+    <div class="wrap nav" id="nav">
+      <a class="brand" href="index.html">
+        <img src="images/profil.jpg" class="logo" alt="Profilbild"> Fionn
+      </a>
+
+      <nav class="navlinks">
+        <a href="ueber.html">Über mich</a>
+        <a href="erfahrung.html">Erfahrung</a>
+        <a href="projekte.html">Projekte</a>
+        <a href="skills.html">Skills</a>
+        <a href="hobbys.html">Hobbys</a>
+        <a href="module.html">Module</a>
+        <a href="react.html">React</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+
+    <button type="button" class="menu-toggle"
+      onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main class="wrap">
+    <section>
+    <div class="section-title">
+      <h1>Mini-Projekt: Aufgabenliste und ein Taschenrechner</h1>
+    </div>
+
+    <p class="muted">
+        Hier findest du meine einfache Aufgabenliste, die ich mit React erstellt habe.
+    </p>
+
+    <div class="card task-card">
+      <h2>Aufgaben</h2>
+
+      <div class="task-input-group">
+        <input id="taskInput" type="text" placeholder="Neue Aufgabe...">
+        <button type="button" onclick="addTask()" class="btn">Hinzufügen</button>
+      </div>
+
+      <ul id="taskList" class="task-list"></ul>
+    </div>
+
+<!-- Taschenrechner -->
+<div class="card calculator-card">
+  <h2>Taschenrechner</h2>
+
+  <input type="text" id="calcDisplay" readonly class="calc-display">
+
+  <div class="calc-grid">
+    <button type="button" onclick="press('7')">7</button>
+    <button type="button" onclick="press('8')">8</button>
+    <button type="button" onclick="press('9')">9</button>
+    <button type="button" onclick="press('/')">/</button>
+
+    <button type="button" onclick="press('4')">4</button>
+    <button type="button" onclick="press('5')">5</button>
+    <button type="button" onclick="press('6')">6</button>
+    <button type="button" onclick="press('*')">*</button>
+
+    <button type="button" onclick="press('1')">1</button>
+    <button type="button" onclick="press('2')">2</button>
+    <button type="button" onclick="press('3')">3</button>
+    <button type="button" onclick="press('-')">-</button>
+
+    <button type="button" onclick="press('0')">0</button>
+    <button type="button" onclick="press('.')">.</button>
+    <button type="button" onclick="clearCalc()">C</button>
+    <button type="button" onclick="calculate()">=</button>
+  </div>
+</div>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © <span id="year"></span> Fionn · Portfolio — Applikationsentwickler bei der WISS |
+      <a href="impressum.html">Impressum</a>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="javascripts/react.js"></script>
+  <script src="javascripts/counter.js"></script>
+  <script src="javascripts/calc.js"></script>
+</body>
+</html>

@@ -16,6 +16,7 @@
 </head>
 
 <body>
+  <div id="pageCounter" class="page-counter">Lädt…</div>
   <header>
     <div class="wrap nav" id="nav">
       <a class="brand" href="index.html">
@@ -26,8 +27,9 @@
         <a href="projekte.html">Projekte</a>
         <a href="skills.html">Skills</a>
         <a href="hobbys.html">Hobbys</a>
-        <a href="kontakt.html">Kontakt</a>
         <a href="module.html">Module</a>
+        <a href="react.html">React</a>
+        <a href="kontakt.html">Kontakt</a>
       </nav>
       <button type="button" class="menu-toggle"
         onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
@@ -130,6 +132,19 @@
         <a href="https://www.modulbaukasten.ch/module/187" target="_blank">zum Modul</a>
       </article>
 
+      <article class="card project">
+        <h3>Modul 293: Webauftritt erstellen und veröffentlichen</h3>
+        <p class="muted">Webseiten mit HTML und CSS erstellt.</p>
+        <div class="skills"><span class="skill">gut</span></div>
+        <a href="https://www.modulbaukasten.ch/module/293" target="_blank">zum Modul</a>
+      </article>
+
+      <article class="card project">
+        <h3>Modul 322: Benutzerschnittstellen entwerfen und implementieren</h3>
+        <p class="muted">Schnittstellen mit Figma und auf Papiert entworfen und SUS Tests durchgeführt.</p>
+        <div class="skills"><span class="skill">gut</span></div>
+        <a href="https://www.modulbaukasten.ch/module/322" target="_blank">zum Modul</a>
+      </article>
       <!-- genügend -->
       <article class="card project">
         <h3>Modul 231: Datenschutz und Datensicherheit anwenden</h3>
@@ -154,6 +169,7 @@
         href="impressum.html">Impressum</a></div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="javascripts/counter.js"></script>
 </body>
 
 </html>

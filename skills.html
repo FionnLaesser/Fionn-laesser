@@ -72,6 +72,7 @@
 </head>
 
 <body>
+  <div id="pageCounter" class="page-counter">Lädt…</div>
   <header>
     <div class="wrap nav" id="nav">
       <a class="brand" href="index.html">
@@ -81,10 +82,11 @@
         <a href="ueber.html">Über mich</a>
         <a href="erfahrung.html">Erfahrung</a>
         <a href="projekte.html">Projekte</a>
-        <a href="skills.html" aria-current="page">Skills</a>
+        <a href="skills.html">Skills</a>
         <a href="hobbys.html">Hobbys</a>
-        <a href="kontakt.html">Kontakt</a>
         <a href="module.html">Module</a>
+        <a href="react.html">React</a>
+        <a href="kontakt.html">Kontakt</a>
       </nav>
       <button type="button" class="menu-toggle" aria-label="Menue oeffnen"
         onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
@@ -231,5 +233,6 @@
     document.getElementById('year').textContent = new Date().getFullYear();
     window.addEventListener('load', () => document.body.classList.add('loaded'));
   </script>
+  <script src="javascripts/counter.js"></script>
 </body>
 </html>

@@ -17,20 +17,22 @@
 </head>
 
 <body>
+  <div id="pageCounter" class="page-counter">Lädt…</div>
   <header>
     <div class="wrap nav" id="nav">
       <a class="brand" href="index.html">
         <img src="images/profil.jpg" class="logo" alt="Logo Fionn"> Fionn
       </a>
 
-      <nav class="navlinks" aria-label="Hauptnavigation">
+      <nav class="navlinks">
         <a href="ueber.html">Über mich</a>
         <a href="erfahrung.html">Erfahrung</a>
         <a href="projekte.html">Projekte</a>
         <a href="skills.html">Skills</a>
         <a href="hobbys.html">Hobbys</a>
-        <a href="kontakt.html">Kontakt</a>
         <a href="module.html">Module</a>
+        <a href="react.html">React</a>
+        <a href="kontakt.html">Kontakt</a>
       </nav>
 
       <button
@@ -60,7 +62,7 @@
             <div class="muted">eigene Mini-Projekte</div>
           </div>
           <div class="stat">
-            <b>Java/HTML und CSS</b>
+            <b>Java, JavaScript, React und NoSQL</b>
             <div class="muted">Aktueller Fokus</div>
           </div>
           <div class="stat">
@@ -100,5 +102,6 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script src="javascripts/counter.js"></script>
 </body>
 </html>

@@ -9,19 +9,21 @@
   <meta name="robots" content="noindex">
 </head>
 <body>
+  <div id="pageCounter" class="page-counter">Lädt…</div>
   <header>
     <div class="wrap nav" id="nav">
       <a class="brand" href="index.html">
         <img src="images/profil.jpg" class="logo" alt="Logo Fionn" > Fionn
       </a>
-      <nav class="navlinks" aria-label="Hauptnavigation">
-        <a href="ueber.html"> Über mich</a>
+      <nav class="navlinks">
+        <a href="ueber.html">Über mich</a>
         <a href="erfahrung.html">Erfahrung</a>
         <a href="projekte.html">Projekte</a>
         <a href="skills.html">Skills</a>
         <a href="hobbys.html">Hobbys</a>
+        <a href="module.html">Module</a>
+        <a href="react.html">React</a>
         <a href="kontakt.html">Kontakt</a>
-      <a href="module.html">Module</a>
       </nav>
       <button type="button" class="menu-toggle" aria-label="Menue umschalten" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
     </div>
@@ -50,5 +52,6 @@
   <div class="wrap">© <span id="year"></span> Fionn · Portfolio — Applikationsentwickler bei der WISS | <a href="impressum.html">Impressum</a></div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="javascripts/counter.js"></script>
 </body>
 </html>
