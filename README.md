@@ -1,7 +1,7 @@
-# Fionn Laesser – Portfolio Webseite
+# Fionn Laesser – Portfolio Webseite
 
 Willkommen auf meinem Portfolio!  
-Ich bin **Fionn Laesser**, im 2. Lehrjahr zur Ausbildung als Informatiker Applikationsentwickler bei der WISS.
+Ich bin **Fionn Laesser**, im 2. Lehrjahr zur Ausbildung als Informatiker Applikationsentwickler bei der WISS.
 
 ---
 
@@ -14,9 +14,9 @@ Die Informatik begeistert mich mit ihren vielen spannenden Möglichkeiten. Beson
 ## Inhalt der Webseite  
 - **Über mich** – meine Motivation, Ausbildung und Interessen  
 - **Erfahrung** – bisherige Projekte und Lernfortschritte  
-- **Projekte** – eine Auswahl meiner Mini‑ und Webprojekte mit Technologien wie Java, HTML und CSS  
+- **Projekte** – eine Auswahl meiner Mini- und Webprojekte mit Technologien wie Java, HTML und CSS  
 - **Skills** – meine technischen Kenntnisse und Werkzeuge  
-- **Hobbys** – was ich in meiner Freizeit mache (z. B. Fussball, Sport)  
+- **Hobbys** – was ich in meiner Freizeit mache (z. B. Fussball, Sport)  
 - **Kontakt** – wie du mich erreichen kannst  
 - **Module** – Zusatzinformationen / Module, die ich im Laufe der Ausbildung bearbeite  
 
@@ -24,12 +24,13 @@ Die Informatik begeistert mich mit ihren vielen spannenden Möglichkeiten. Beson
 
 ## Ziel und Technik  
 Ziel dieser Webseite ist es, einen kompetenten, modernen Eindruck zu vermitteln – sowohl optisch als auch technisch.  
-Technisch basiert sie auf HTML, CSS und ggf. weiteren Webtechnologien, sodass ich mein Können im Web‑ und Applikationsbereich zeige.
+Technisch basiert sie auf HTML, CSS und weiteren Webtechnologien, sodass ich mein Können im Web- und Applikationsbereich zeige.
 
 ---
 
 ## Ordnerstruktur
 
+```
 /
 ├── index.html        – Startseite
 ├── ueber.html        – Ueber mich
@@ -45,7 +46,7 @@ Technisch basiert sie auf HTML, CSS und ggf. weiteren Webtechnologien, sodass ic
 ├── images/           – Bildmaterial (Profilbild, Projekt-Screenshots, Hobbys)
 ├── CNAME             – Domain-Konfiguration für GitHub Pages
 └── README.md         – Projektbeschreibung / Hinweise
-
+```
 
 ---
 
@@ -58,9 +59,9 @@ Technisch basiert sie auf HTML, CSS und ggf. weiteren Webtechnologien, sodass ic
 ---
 
 ## Kontakt 
-Wenn du Fragen hast oder Feedback hast **nur zu!**  
+Wenn du Fragen oder Feedback hast **nur zu!**  
 Besuche die Kontaktseite oder sende mir eine Nachricht. Ich freue mich auf deinen Input.
 
 ---
 
-© 2025 Fionn Lässer
+© 2025 Fionn Laesser
