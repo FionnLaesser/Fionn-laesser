@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <title>Seite nicht gefunden — 404</title>
+  <meta name="description" content="Die gesuchte Seite wurde nicht gefunden." >
+  <link rel="stylesheet" href="styles.css" >
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <header>
+    <div class="wrap nav" id="nav">
+      <a class="brand" href="index.html">
+        <img src="images/profil.jpg" class="logo" alt="Logo Fionn" > Fionn
+      </a>
+      <nav class="navlinks" aria-label="Hauptnavigation">
+        <a href="ueber.html"> Über mich</a>
+        <a href="erfahrung.html">Erfahrung</a>
+        <a href="projekte.html">Projekte</a>
+        <a href="skills.html">Skills</a>
+        <a href="hobbys.html">Hobbys</a>
+        <a href="kontakt.html">Kontakt</a>
+      <a href="module.html">Module</a>
+      </nav>
+      <button type="button" class="menu-toggle" aria-label="Menue umschalten" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    </div>
+  </header>
+
+  <main id="main" class="wrap" >
+    <section class="hero" aria-labelledby="error-title">
+      <div class="hero-text narrow">
+        <h1 id="error-title">404 — Seite nicht gefunden</h1>
+        <p class="muted">Die von dir aufgerufene Adresse existiert hier nicht. Möglicherweise wurde die Seite verschoben oder der Link enthält einen Tippfehler.</p>
+        <div class="actions-row">
+          <a class="btn" href="index.html" aria-label="Zur Startseite">Zur Startseite</a>
+          <a class="btn" href="kontakt.html" aria-label="Kontaktseite">Kontakt</a>
+          <a class="btn" href="projekte.html" aria-label="Meine Projekte">Projekte</a>
+        </div>
+        <div class="info-block">
+          <p>Falls du denkst, dass dies ein Fehler ist, melde dich gerne <a href="kontakt.html">über das Kontaktformular</a> — ich schaue es mir an.</p>
+        </div>
+
+        <p class="tip">Tipp: Überprüfe die URL auf Rechtschreibfehler oder gehe zur <a href="index.html">Startseite</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+  <div class="wrap">© <span id="year"></span> Fionn · Portfolio — Applikationsentwickler bei der WISS | <a href="impressum.html">Impressum</a></div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <title>Kontakt — Fionn</title>
+  <link rel="stylesheet" href="styles.css" >
+  <!-- Favicon & App Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" >
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" >
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" >
+  <link rel="icon" href="images/favicon.ico" sizes="any" >
+  <link rel="manifest" href="site.webmanifest" >
+  <meta name="theme-color" content="#CE1126" >
+
+  <style>
+    .form-message {
+      display: none;
+      margin-top: 0.5rem;
+      font-weight: 600;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .form-message[style*="display: block"] {
+      opacity: 1;
+    }
+
+    .form-message.success {
+      color: var(--accent, green);
+    }
+
+    .form-message.error {
+      color: tomato;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav" id="nav">
+      <a class="brand" href="index.html">
+        <img src="images/profil.jpg" class="logo" alt="Profilbild" >
+        Fionn
+      </a>
+      <nav class="navlinks" aria-label="Hauptnavigation">
+        <a href="ueber.html">Über mich</a>
+        <a href="erfahrung.html">Erfahrung</a>
+        <a href="projekte.html">Projekte</a>
+        <a href="skills.html">Skills</a>
+        <a href="hobbys.html">Hobbys</a>
+        <a href="kontakt.html" aria-current="page">Kontakt</a>
+        <a href="module.html">Module</a>
+      </nav>
+      <button type="button" class="menu-toggle" aria-controls="nav" aria-expanded="false"
+        onclick="document.getElementById('nav').classList.toggle('open'); this.setAttribute('aria-expanded', document.getElementById('nav').classList.contains('open'));">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <div class="section-title">
+        <h1>Kontakt</h1>
+      </div>
+      <div class="card">
+        <p><strong>Email:</strong> <a href="mailto:flaesser@bluewin.ch">flaesser@bluewin.ch</a></p>
+        <p><strong>Telefon:</strong> +41 77 534 97 48</p>
+        <p><strong>Vor- und Nachname:</strong> Fionn Lässer</p>
+        <address>
+          <p><strong>Adresse:</strong><br>
+            Ringweg 12<br>
+            9469 Haag SG<br>
+            Schweiz
+          </p>
+        </address>
+      </div>
+    </section>
+
+    <section>
+      <div>
+        <form id="contactForm" action="https://formspree.io/f/xjkeybpv" method="POST" class="contact-form" novalidate>
+          <h2>📩 Schreib mir eine Nachricht</h2>
+
+          <label for="email">Deine E-Mail</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="z. B. max@beispiel.ch" >
+
+          <label for="message">Deine Nachricht</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Was möchtest du mir sagen?"></textarea>
+
+          <button type="submit">Senden</button>
+
+          <!-- Meldungen -->
+          <p id="formSuccess" class="form-message success">✅ Danke! Deine Nachricht wurde gesendet.</p>
+          <p id="formError" class="form-message error">❌ Ups! Etwas ist schief gelaufen.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Fionn · Portfolio — Applikationsentwickler bei der WISS | <a href="impressum.html">Impressum</a></div>
+  </footer>
+
+  <script>
+    // Jahreszahl im Footer aktuell halten
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Formspree-Handling
+    document.getElementById("contactForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.reset();
+          document.getElementById("formSuccess").style.display = "block";
+          document.getElementById("formError").style.display = "none";
+        } else {
+          document.getElementById("formError").style.display = "block";
+          document.getElementById("formSuccess").style.display = "none";
+        }
+      } catch (err) {
+        document.getElementById("formError").style.display = "block";
+        document.getElementById("formSuccess").style.display = "none";
+      }
+    });
+  </script>
+</body>
+
+</html>

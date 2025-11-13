@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projekte — Fionn</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Favicon & App Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#CE1126">
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav" id="nav">
+      <a class="brand" href="index.html">
+        <img src="images/profil.jpg" class="logo" alt="Profilbild"> Fionn </a>
+      <nav class="navlinks">
+        <a href="ueber.html">Über mich</a>
+        <a href="erfahrung.html">Erfahrung</a>
+        <a href="projekte.html">Projekte</a>
+        <a href="skills.html">Skills</a>
+        <a href="hobbys.html">Hobbys</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="module.html">Module</a>
+      </nav>
+      <button type="button" class="menu-toggle"
+        onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <div class="section-title">
+        <h1>Projekte</h1>
+      </div>
+      <div class="grid cols-3">
+        <article class="card project">
+          <a href="images/projekt-1.jpg">
+            <img src="images/projekt-1.jpg" alt="Projekt 1">
+          </a>
+          <div>
+            <h3>Projekt 1: Portfolio-Webseite</h3>
+            <p class="muted">Eigene Portfolio-Webseite mit eigener Domain erstellt. (Mithilfe von ChatGPT)</p>
+            <div class="skills">
+              <span class="skill">HTML</span><span class="skill">CSS</span> <span class="skill">Git</span>
+            </div>
+          </div>
+        </article>
+        <article class="card project">
+          <a href="images/projekt-2.jpg">
+            <img src="images/projekt-2.jpg" alt="Projekt 2">
+          </a>
+          <div>
+            <h3>Projekt 2: Pong Game mit dem Micro:Bit</h3>
+            <p class="muted">In dem Modul 245 erstellte ich mit meiner Gruppe Ein Pong Game mit dem Micro:Bit und Python
+            </p>
+            <div class="skills">
+              <span class="skill">Python</span><span class="skill">Micro:Bit Technik</span>
+            </div>
+          </div>
+        </article>
+        <article class="card project">
+          <a href="images/projekt-3.jpg">
+            <img src="images/projekt-3.jpg" alt="Projekt 3">
+          </a>
+          <div>
+            <h3>Projekt 3: Eigenes 3D Spiel mit Unreal Engine</h3>
+            <p class="muted">Ich erstellte ein eigenes Spiel mit Unreal Engine und Blueprint</p>
+            <div class="skills">
+              <span class="skill">Blueprint</span><span class="skill">Unreal Engine</span>
+            </div>
+          </div>
+        </article>
+        <article class="card project">
+          <a href="images/projekt-4.jpg">
+            <img src="images/projekt-4.jpg" alt="Projekt 4">
+          </a>
+          <div>
+            <h3>Projekt 4: Kleinprojekte mit meinem Flipper Zero</h3>
+            <p class="muted">Mit Tutorials und eigenem Austüfteln habe ich verschiedene kleine Projekte mit meinem
+              Flipper Zero gemacht. Zum Beispiel „Fake-WLAN“ mit Spass-Webseite oder das Ein- und Umschalten von
+              Lichtern.</p>
+            <div class="skills">
+              <span class="skill">WiFi Marauder</span><span class="skill">HTML</span><span class="skill">Infrared</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Fionn · Portfolio — Applikationsentwickler bei der WISS | <a
+        href="impressum.html">Impressum</a></div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>

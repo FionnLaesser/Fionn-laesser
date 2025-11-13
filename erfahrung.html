@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <title>Erfahrung — Fionn</title>
+  <link rel="stylesheet" href="styles.css" >
+
+  <!-- Favicon & App Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#CE1126">
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav" id="nav">
+      <a class="brand" href="index.html">
+        <img src="images/profil.jpg" class="logo" alt="Profilbild von Fionn" > Fionn
+      </a>
+      <nav class="navlinks">
+        <a href="ueber.html">Über mich</a>
+        <a href="erfahrung.html">Erfahrung</a>
+        <a href="projekte.html">Projekte</a>
+        <a href="skills.html">Skills</a>
+        <a href="hobbys.html">Hobbys</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="module.html">Module</a>
+      </nav>
+      <button type="button" class="menu-toggle" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <div class="section-title">
+        <h1>Erfahrung</h1>
+      </div>
+      <div class="exp">
+        <div class="card exp-item">
+          <div class="where">WISS — Applikationsentwicklung</div>
+          <div class="muted">St.Gallen, Schweiz</div>
+          <div class="when">August 2024 – heute</div>
+          <div class="muted description">
+            Ich lerne an der WISS als Applikationsentwickler,
+            wie man Software erstellt und plant, wie man Server verwalten kann und wie man Web-Apps entwickelt.
+          </div>
+        </div>
+        <iframe title="Wiss Webseite Auschnitt"
+          src="https://www.wiss.ch/de-CH/Angebot/Grundbildung/Informatiker-in-EFZ-Fachrichtung-Applikationsentwicklung"
+          width="950" height="400" class="iframe-style" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <p>
+          <a href="https://www.wiss.ch/de-CH/Angebot/Grundbildung/Informatiker-in-EFZ-Fachrichtung-Applikationsentwicklung"
+            target="_blank" rel="noopener noreferrer">
+            WISS-Seite Link
+          </a>
+        </p>
+
+        <div class="card exp-item">
+          <div class="where">Persönliche Projekte</div>
+          <div class="muted">Open Source und Learning</div>
+          <div class="when">2023 – heute</div>
+          <div class="muted description">
+            Kleine Tools und Apps, die ich mithilfe von Tutorials und künstlicher Intelligenz erstelle.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Fionn · Portfolio — Applikationsentwickler bei der WISS | <a
+        href="impressum.html">Impressum</a></div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>

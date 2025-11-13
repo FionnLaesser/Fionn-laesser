@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skills — Fionn</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Skillbar-Stile direkt im HTML -->
+  <style>
+    /* SKILL BARS */
+    .skillbars { margin-top: 1rem; }
+    .skillbar { margin: 1rem 0; }
+    .skillbar .label {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: .4rem;
+      font-weight: 600;
+    }
+    .skillbar .label .name { opacity: .95; }
+    .skillbar .label .value { color: var(--muted); font-size: .9rem; }
+
+    .bar {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
+      overflow: hidden;
+      height: 18px;
+      position: relative;
+    }
+
+    .bar-fill {
+      --level: 0%;
+      width: 0; /* animiert von 0 auf --level */
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      text-align: right;
+      padding-right: 8px;
+      line-height: 18px;
+      color: white;
+      font-size: .75rem;
+      font-weight: 600;
+      transition: width 1.8s ease;
+      will-change: width;
+    }
+
+    /* --- Levels passen jetzt zu den angezeigten Werten --- */
+    .java   { --level: 100%; }
+    .html   { --level: 85%; }
+    .sql    { --level: 80%; }
+    .git    { --level: 80%; }
+    .css    { --level: 75%; }
+    .bash   { --level: 75%; }
+    .python { --level: 65%; }
+    .linux  { --level: 55%; }
+    .nosql  { --level: 10%;  }
+
+    /* Animation nach Laden */
+    body.loaded .bar-fill { width: var(--level); }
+  </style>
+
+  <!-- Favicon & App Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#CE1126">
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav" id="nav">
+      <a class="brand" href="index.html">
+        <img src="images/profil.jpg" class="logo" alt="Profilbild Fionn"> Fionn
+      </a>
+      <nav class="navlinks">
+        <a href="ueber.html">Über mich</a>
+        <a href="erfahrung.html">Erfahrung</a>
+        <a href="projekte.html">Projekte</a>
+        <a href="skills.html" aria-current="page">Skills</a>
+        <a href="hobbys.html">Hobbys</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="module.html">Module</a>
+      </nav>
+      <button type="button" class="menu-toggle" aria-label="Menue oeffnen"
+        onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <div class="section-title">
+        <h1>Skills</h1>
+      </div>
+      <div class="card">
+
+        <div class="skills">
+          <span class="skill">Java</span>
+          <span class="skill">HTML</span>
+          <span class="skill">SQL</span>
+          <span class="skill">Git</span>
+          <span class="skill">CSS</span>
+          <span class="skill">Bash</span>
+          <span class="skill">Python</span>
+          <span class="skill">Linux</span>
+          <span class="skill">NoSQL</span>
+        </div>
+
+        <div class="skillbars">
+          <!-- Java -->
+          <div class="skillbar">
+            <div class="label">
+              <span class="name">Java</span>
+              <span class="value">100%</span>
+            </div>
+            <div class="bar">
+              <div class="bar-fill java" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- HTML -->
+          <div class="skillbar">
+            <div class="label">
+              <span class="name">HTML</span>
+              <span class="value">85%</span>
+            </div>
+            <div class="bar">
+              <div class="bar-fill html" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- SQL -->
+          <div class="skillbar">
+            <div class="label">
+              <span class="name">SQL</span>
+              <span class="value">80%</span>
+            </div>
+            <div class="bar">
+              <div class="bar-fill sql" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Git -->
+          <div class="skillbar">
+            <div class="label">
+              <span class="name">Git</span>
+              <span class="value">80%</span>
+            </div>
+            <div class="bar">
+              <div class="bar-fill git" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- CSS -->
+          <div class="skillbar">
+            <div class="label">
+              <span class="name">CSS</span>
+              <span class="value">75%</span>
+            </div>
+            <div class="bar">
+              <div class="bar-fill css" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Bash -->
+          <div class="skillbar">
+            <div class="label">
+              <span class="name">Bash</span>
+              <span class="value">75%</span>
+            </div>
+            <div class="bar">
+              <div class="bar-fill bash" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Python -->
+          <div class="skillbar">
+            <div class="label">
+              <span class="name">Python</span>
+              <span class="value">65%</span>
+            </div>
+            <div class="bar">
+              <div class="bar-fill python" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Linux -->
+          <div class="skillbar">
+            <div class="label">
+              <span class="name">Linux</span>
+              <span class="value">55%</span>
+            </div>
+            <div class="bar">
+              <div class="bar-fill linux" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+                  <!-- NoSQL -->
+          <div class="skillbar">
+            <div class="label">
+              <span class="name">NoSQL</span>
+              <span class="value">10%</span>
+            </div>
+            <div class="bar">
+              <div class="bar-fill nosql" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+        <div>
+        <!-- Hinweis zu Stand & Prozentbasis -->
+        <p class="muted note">
+          Stand: November 2025 · Die Prozentangaben basieren auf meiner bisherigen Erfahrung.
+          Das heisst, dass z. B. 100 % nicht bedeutet, dass ich in diesem Bereich alles beherrsche,
+          sondern dass ich hier meine meiste Erfahrung gesammelt habe.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Fionn · Portfolio — Applikationsentwickler bei der WISS | <a
+        href="impressum.html">Impressum</a></div>
+  </footer>
+
+  <!-- Jahr-Update + Animation-Start -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    window.addEventListener('load', () => document.body.classList.add('loaded'));
+  </script>
+</body>
+</html>

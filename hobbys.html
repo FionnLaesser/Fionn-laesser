@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <title>Hobbys — Fionn</title>
+  <link rel="stylesheet" href="styles.css" >
+    <!-- Favicon & App Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#CE1126">
+</head>
+<body>
+  <header>
+    <div class="wrap nav" id="nav">
+      <a class="brand" href="index.html">
+        <img src="images/profil.jpg" class="logo" alt="Profilbild"> Fionn
+      </a>
+      <nav class="navlinks">
+        <a href="ueber.html">Über mich</a>
+        <a href="erfahrung.html">Erfahrung</a>
+        <a href="projekte.html">Projekte</a>
+        <a href="skills.html">Skills</a>
+        <a href="hobbys.html">Hobbys</a>
+        <a href="kontakt.html">Kontakt</a>
+      <a href="module.html">Module</a>
+      </nav>
+      <button type="button" class="menu-toggle" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <div class="section-title">
+        <h1>Hobbys</h1>
+      </div>
+
+      <div class="gallery">
+        <!-- Fussball -->
+        <figure class="slideshow">
+          <img src="images/fussball.jpg" alt="Fussball 1" >
+          <img src="images/fussball2.jpg" alt="Fussball 2" >
+          <img src="images/fussball3.png" alt="Fussball 3" >
+          <figcaption>Fussball im FC Ruggell</figcaption>
+        </figure>
+
+        <!-- Fitness -->
+        <figure class="slideshow">
+          <img src="images/fitness.jpg" alt="Fitness 1" >
+          <img src="images/fitness2.jpg" alt="Fitness 2" >
+          <img src="images/fitness3.jpg" alt="Fitness 3" >
+          <figcaption>Fitness training im Fitness 5/24</figcaption>
+        </figure>
+
+        <!-- Schach (achte auf Grosses S wie in deiner Datei "Schach.jpg") -->
+        <figure class="slideshow">
+          <img src="images/schach.jpg" alt="Schach 1" >
+          <img src="images/schach2.jpg" alt="Schach 2" >
+          <img src="images/schach3.jpg" alt="Schach 3" >
+          <figcaption>Schach</figcaption>
+        </figure>
+                <figure class="slideshow">
+          <img src="images/toeff.jpg" alt="Töff 1" >
+          <img src="images/toeff2.jpg" alt="Töff 2" >
+          <img src="images/toeff3.jpg" alt="Töff 3" >
+          <figcaption>Töff fahren</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+  <div class="wrap">© <span id="year"></span> Fionn · Portfolio — Applikationsentwickler bei der WISS | <a href="impressum.html">Impressum</a></div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".slideshow").forEach(show => {
+        const imgs = show.querySelectorAll("img");
+        if (!imgs.length) return;
+        let i = 0;
+        imgs[i].classList.add("active");
+        setInterval(() => {
+          imgs[i].classList.remove("active");
+          i = (i + 1) % imgs.length;
+          imgs[i].classList.add("active");
+        }, 3000);
+      });
+    });
+  </script>
+</body>
+</html>

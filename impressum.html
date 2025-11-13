@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Impressum — Fionn</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#CE1126">
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav" id="nav">
+      <a class="brand" href="index.html">
+        <img src="images/profil.jpg" class="logo" alt="Profilbild von Fionn"> Fionn
+      </a>
+      <nav class="navlinks">
+        <a href="ueber.html">Über mich</a>
+        <a href="erfahrung.html">Erfahrung</a>
+        <a href="projekte.html">Projekte</a>
+        <a href="skills.html">Skills</a>
+        <a href="hobbys.html">Hobbys</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="module.html">Module</a>
+      </nav>
+      <button type="button" class="menu-toggle"
+        onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <div class="section-title">
+        <h1>Impressum</h1>
+      </div>
+      <div class="card">
+        <p><strong>Verantwortlich für den Inhalt:</strong><br>
+          Fionn Lässer<br>
+          Ringweg 12<br>
+          9469 Haag SG<br>
+          Schweiz</p>
+        <p><strong>Email:</strong> flaesser@bluewin.ch</p>
+        <p><strong>Telefon:</strong> +41 77 534 97 48</p>
+        <p>Diese Website dient ausschliesslich zu privaten und schulischen Zwecken.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Fionn · Portfolio — Applikationsentwickler bei der WISS</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>

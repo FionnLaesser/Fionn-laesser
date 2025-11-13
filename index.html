@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fionn — Applikationsentwickler (WISS)</title>
+  <meta name="description" content="Portfolio von Fionn Lässer">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon & App Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#CE1126">
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav" id="nav">
+      <a class="brand" href="index.html">
+        <img src="images/profil.jpg" class="logo" alt="Logo Fionn"> Fionn
+      </a>
+
+      <nav class="navlinks" aria-label="Hauptnavigation">
+        <a href="ueber.html">Über mich</a>
+        <a href="erfahrung.html">Erfahrung</a>
+        <a href="projekte.html">Projekte</a>
+        <a href="skills.html">Skills</a>
+        <a href="hobbys.html">Hobbys</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="module.html">Module</a>
+      </nav>
+
+      <button
+        type="button"
+        class="menu-toggle"
+        aria-label="Menue umschalten"
+        aria-expanded="false"
+        onclick="const n=document.getElementById('nav'); n.classList.toggle('open'); this.setAttribute('aria-expanded', n.classList.contains('open'));">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <section class="hero">
+      <!-- Linke Spalte -->
+      <div class="hero-text">
+        <span class="chip">Informatiker EFZ — Applikationsentwickler</span>
+        <h1>Hallo, ich bin Fionn und mache meine Ausbildung zum Informatiker Applikationsentwickler im 2. Lehrjahr</h1>
+        <p>Ich liebe es zu <b>programmieren</b>, weil ich dabei kreativ sein und Probleme lösen kann. Die Welt der
+          Informatik begeistert mich, da sie voller spannender Möglichkeiten steckt. Besonders gern debugge ich meinen
+          Code und verbessere meine Fehler, um daraus zu lernen.</p>
+
+        <div class="statbar">
+          <div class="stat">
+            <b>3+</b>
+            <div class="muted">eigene Mini-Projekte</div>
+          </div>
+          <div class="stat">
+            <b>Java/HTML und CSS</b>
+            <div class="muted">Aktueller Fokus</div>
+          </div>
+          <div class="stat">
+            <b>WISS</b>
+            <div class="muted">Applikationsentwicklung</div>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <br>
+          <a class="btn" href="projekte.html">Meine Projekte</a>
+          <a class="btn" href="ueber.html">Über mich</a>
+        </div>
+        </div>
+
+        <!-- Rechte Spalte -->
+        <div class="hero-aside">
+          <section class="hero-card" aria-label="Profilkarte">
+            <img src="images/profil.jpg" alt="Profilbild von Fionn" loading="lazy">
+            <br>
+            <div class="hero-card-chips">
+              <span class="chip">Haag, SG</span>
+            <span class="chip">Informatik begeistert</span>
+            <span class="chip">Deutsch / Englisch</span>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © <span id="year"></span> Fionn · Portfolio — Applikationsentwickler bei der WISS |
+      <a href="impressum.html">Impressum</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
