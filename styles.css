@@ -626,42 +626,6 @@ section {
   }
 }
 
-/* individuelle Levels */
-.sql {
-  --level: 100%;
-}
-
-.java {
-  --level: 85%;
-}
-
-.bash {
-  --level: 85%;
-}
-
-.git {
-  --level: 80%;
-}
-
-.html {
-  --level: 75%;
-}
-
-.css {
-  --level: 60%;
-}
-
-.linux {
-  --level: 60%;
-}
-.nosql {
-  --level: 10%;
-}
-
-.python {
-  --level: 25%;
-}
-
 
 /* Animation nach Laden */
 body.loaded .bar-fill {
