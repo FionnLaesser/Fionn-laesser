@@ -28,7 +28,8 @@ Technisch basiert sie auf HTML, CSS und ggf. weiteren Webtechnologien, sodass ic
 
 ---
 
-## Ordnerstruktur  
+## Ordnerstruktur
+
 /
 ├── index.html        – Startseite
 ├── ueber.html        – Ueber mich
@@ -44,6 +45,7 @@ Technisch basiert sie auf HTML, CSS und ggf. weiteren Webtechnologien, sodass ic
 ├── images/           – Bildmaterial (Profilbild, Projekt-Screenshots, Hobbys)
 ├── CNAME             – Domain-Konfiguration für GitHub Pages
 └── README.md         – Projektbeschreibung / Hinweise
+
 
 ---
 
