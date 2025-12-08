@@ -49,15 +49,15 @@
 
     /* --- Levels passen jetzt zu den angezeigten Werten --- */
     .java   { --level: 100%; }
-    .html   { --level: 85%; }
+    .html   { --level: 75%; }
     .sql    { --level: 80%; }
     .git    { --level: 80%; }
     .css    { --level: 75%; }
     .bash   { --level: 75%; }
     .python { --level: 65%; }
-    .javascript { --level: 65%; }
+    .javascript { --level: 90%; }
     .linux  { --level: 55%; }
-    .nosql  { --level: 10%;  }
+    .nosql  { --level: 85%;  }
 
     /* Animation nach Laden */
     body.loaded .bar-fill { width: var(--level); }
@@ -103,15 +103,15 @@
 
         <div class="skills">
           <span class="skill">Java</span>
-          <span class="skill">HTML</span>
+          <span class="skill">Javascript</span>
+          <span class="skill">NoSQL</span>
           <span class="skill">SQL</span>
           <span class="skill">Git</span>
+          <span class="skill">HTML</span>
           <span class="skill">CSS</span>
           <span class="skill">Bash</span>
           <span class="skill">Python</span>
-          <span class="skill">Javascript</span>
           <span class="skill">Linux</span>
-          <span class="skill">NoSQL</span>
         </div>
         <div>
         <div class="skillbars">
@@ -125,18 +125,27 @@
               <div class="bar-fill java" aria-hidden="true"></div>
             </div>
           </div>
-
-          <!-- HTML -->
+          <!-- Javascript -->
           <div class="skillbar">
             <div class="label">
-              <span class="name">HTML</span>
-              <span class="value">85%</span>
+              <span class="name">Javascript</span>
+              <span class="value">90%</span>
             </div>
             <div class="bar">
-              <div class="bar-fill html" aria-hidden="true"></div>
+              <div class="bar-fill javascript" aria-hidden="true"></div>
             </div>
           </div>
 
+                  <!-- NoSQL -->
+          <div class="skillbar">
+            <div class="label">
+              <span class="name">NoSQL</span>
+              <span class="value">80%</span>
+            </div>
+            <div class="bar">
+            <div class="bar-fill nosql" aria-hidden="true"></div>
+            </div>
+          </div>
           <!-- SQL -->
           <div class="skillbar">
             <div class="label">
@@ -158,7 +167,16 @@
               <div class="bar-fill git" aria-hidden="true"></div>
             </div>
           </div>
-
+<!-- HTML -->
+          <div class="skillbar">
+            <div class="label">
+              <span class="name">HTML</span>
+              <span class="value">75%</span>
+            </div>
+            <div class="bar">
+              <div class="bar-fill html" aria-hidden="true"></div>
+            </div>
+          </div>
           <!-- CSS -->
           <div class="skillbar">
             <div class="label">
@@ -191,16 +209,6 @@
               <div class="bar-fill python" aria-hidden="true"></div>
             </div>
           </div>
-          <!-- Javascript -->
-          <div class="skillbar">
-            <div class="label">
-              <span class="name">Javascript</span>
-              <span class="value">65%</span>
-            </div>
-            <div class="bar">
-              <div class="bar-fill javascript" aria-hidden="true"></div>
-            </div>
-          </div>
 
           <!-- Linux -->
           <div class="skillbar">
@@ -213,22 +221,12 @@
             </div>
           </div>
         </div>
-                  <!-- NoSQL -->
-          <div class="skillbar">
-            <div class="label">
-              <span class="name">NoSQL</span>
-              <span class="value">10%</span>
-            </div>
-            <div class="bar">
-            <div class="bar-fill nosql" aria-hidden="true"></div>
-            </div>
-          </div>
         <div>
         </div>
         </div>
         <!-- Hinweis zu Stand & Prozentbasis -->
         <p class="muted note">
-          Stand: November 2025 · Die Prozentangaben basieren auf meiner bisherigen Erfahrung.
+          Stand: Dezember 2025 · Die Prozentangaben basieren auf meiner bisherigen Erfahrung.
           Das heisst, dass z. B. 100 % nicht bedeutet, dass ich in diesem Bereich alles beherrsche,
           sondern dass ich hier meine meiste Erfahrung gesammelt habe.
         </p>
