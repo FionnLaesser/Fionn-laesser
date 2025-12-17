@@ -51,6 +51,13 @@
         Hier findest du meine einfache Aufgabenliste, die ich mit React erstellt habe.
     </p>
 
+    <div class="card react-card">
+      <h2>React Webseite</h2>
+      <p>Dies ist mein Projekt aus dem Modul 294. Das GitHub-Repository stammt von Sven Schirmer, meinem Lehrer. Um die React-Webseite zu öffnen, müssen Sie zuerst das Backend herunterladen und ausführen. Laden Sie das Backend von GitHub herunter: <a href="https://github.com/FionnLaesser/Casino-Webapp-Backend-API" target="_blank">https://github.com/FionnLaesser/Casino-Webapp-Backend-API</a>. Führen Sie es mit dem Befehl <code>docker compose up -d</code> aus.</p>
+      <label><input type="checkbox" id="confirmDocker"> Ich bestätige, dass ich 'docker compose up -d' ausgeführt habe.</label><br><br>
+      <button id="reactBtn" disabled class="btn" onclick="window.open('https://react.fionn-laesser.ch', '_blank')">Zur React-Webseite</button>
+    </div>
+
     <div class="card task-card">
       <h2>Aufgaben</h2>
 
@@ -102,6 +109,13 @@
   </footer>
 
   <!-- JS -->
+  <script>
+    const checkbox = document.getElementById('confirmDocker');
+    const button = document.getElementById('reactBtn');
+    checkbox.addEventListener('change', function() {
+      button.disabled = !this.checked;
+    });
+  </script>
   <script src="javascripts/react.js"></script>
   <script src="javascripts/counter.js"></script>
   <script src="javascripts/calc.js"></script>

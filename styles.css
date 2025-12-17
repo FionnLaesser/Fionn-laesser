@@ -966,3 +966,12 @@ footer {
     font-size: .8rem;
   }
 }
+
+.react-card {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+  border: 2px solid var(--ring);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
