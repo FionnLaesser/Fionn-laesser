@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mini-Projekt – Aufgabenliste</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-react.css">
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -13,10 +14,224 @@
   <link rel="icon" href="images/favicon.ico" sizes="any">
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#CE1126">
+
+  <style>
+    .react-info-card {
+      margin-top: 28px;
+      padding: 28px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #fff3f5 0%, #ffe4ea 45%, #ffe9dc 100%);
+      border: 2px solid rgba(206, 17, 38, 0.12);
+      box-shadow: 0 12px 35px rgba(206, 17, 38, 0.10);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .react-info-card::before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 170px;
+      height: 170px;
+      background: radial-gradient(circle, rgba(206, 17, 38, 0.14), transparent 70%);
+      border-radius: 50%;
+    }
+
+    .react-info-card h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #9f1022;
+      font-size: 1.9rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .intro-text {
+      color: #5a5a5a;
+      font-size: 1.02rem;
+      line-height: 1.7;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+      font-weight: 500;
+    }
+
+    .react-steps {
+      display: grid;
+      gap: 18px;
+      margin: 22px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .react-step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(206, 17, 38, 0.10);
+      border-radius: 20px;
+      padding: 18px 18px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    }
+
+    .react-step-number {
+      min-width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #e51d36, #ff5770);
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 18px rgba(229, 29, 54, 0.24);
+      flex-shrink: 0;
+    }
+
+    .react-step-content {
+      flex: 1;
+    }
+
+    .react-step-content strong {
+      display: block;
+      color: #9b1023;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .react-step-content p {
+      margin: 0;
+      color: #555;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    .react-step-content a.text-link {
+      color: #b10f24;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .react-step-content a.text-link:hover {
+      text-decoration: underline;
+    }
+
+    .button-row {
+      margin-top: 14px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .small-action-btn,
+    .react-launch-btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 999px;
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+      box-shadow: 0 10px 24px rgba(206, 17, 38, 0.22);
+    }
+
+    .small-action-btn:hover,
+    .react-launch-btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.96;
+    }
+
+    .github-btn {
+      background: linear-gradient(135deg, #24292e, #444c56);
+      box-shadow: 0 10px 24px rgba(36, 41, 46, 0.20);
+    }
+
+    .download-btn {
+      background: linear-gradient(135deg, #ce1126, #ff4f6d);
+    }
+
+    .command-box {
+      margin-top: 10px;
+      background: linear-gradient(135deg, #171717, #2b2b2b);
+      color: #fff;
+      padding: 16px 18px;
+      border-radius: 18px;
+      overflow-x: auto;
+      font-size: 1rem;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
+      width: fit-content;
+      max-width: 100%;
+    }
+
+    .command-box code {
+      font-family: Consolas, Monaco, monospace;
+      letter-spacing: 0.5px;
+    }
+
+    .confirmation-box {
+      margin-top: 26px;
+      padding: 20px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.9);
+      border: 1px solid rgba(206, 17, 38, 0.12);
+      position: relative;
+      z-index: 1;
+    }
+
+    .confirmation-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: #4a1d24;
+      font-weight: 600;
+      line-height: 1.5;
+      cursor: pointer;
+    }
+
+    .confirmation-label input[type="checkbox"] {
+      transform: scale(1.3);
+      accent-color: #ce1126;
+      cursor: pointer;
+    }
+
+    .reactProjectLinkBox {
+      display: none;
+      margin-top: 20px;
+      animation: fadeInUp 0.35s ease;
+    }
+
+    .react-launch-btn {
+      background: linear-gradient(135deg, #ce1126, #ff4f6d);
+      box-shadow: 0 12px 26px rgba(206, 17, 38, 0.28);
+    }
+
+    .success-note {
+      margin-top: 12px;
+      color: #7f1220;
+      font-size: 0.96rem;
+      font-weight: 600;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div id="pageCounter" class="page-counter">Lädt…</div>
+  <div id="pageCounter" class="page-counter">Lädt…</div>
+
   <!-- NAV -->
   <header>
     <div class="wrap nav" id="nav">
@@ -35,62 +250,140 @@
         <a href="kontakt.html">Kontakt</a>
       </nav>
 
-    <button type="button" class="menu-toggle"
-      onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+      <button type="button" class="menu-toggle"
+        onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
     </div>
   </header>
 
-  <!-- CONTENT -->
   <main class="wrap">
     <section>
-    <div class="section-title">
-      <h1>Mini-Projekt: Aufgabenliste und ein Taschenrechner</h1>
-    </div>
-
-    <p class="muted">
-        Hier findest du meine einfache Aufgabenliste, die ich mit React erstellt habe.
-    </p>
-
-    <div class="card task-card">
-      <h2>Aufgaben</h2>
-
-      <div class="task-input-group">
-        <input id="taskInput" type="text" placeholder="Neue Aufgabe...">
-        <button type="button" onclick="addTask()" class="btn">Hinzufügen</button>
+      <div class="section-title">
+        <h1>Mini-Projekt: Aufgabenliste und ein Taschenrechner</h1>
       </div>
 
-      <ul id="taskList" class="task-list"></ul>
-    </div>
+      <p class="muted">
+        Hier findest du meine einfache Aufgabenliste, die ich mit React erstellt habe.
+      </p>
 
-<!-- Taschenrechner -->
-<div class="card calculator-card">
-  <h2>Taschenrechner</h2>
+      <div class="card task-card">
+        <h2>Aufgaben</h2>
 
-  <input type="text" id="calcDisplay" readonly class="calc-display">
+        <div class="task-input-group">
+          <input id="taskInput" type="text" placeholder="Neue Aufgabe...">
+          <button type="button" onclick="addTask()" class="btn">Hinzufügen</button>
+        </div>
 
-  <div class="calc-grid">
-    <button type="button" onclick="press('7')">7</button>
-    <button type="button" onclick="press('8')">8</button>
-    <button type="button" onclick="press('9')">9</button>
-    <button type="button" onclick="press('/')">/</button>
+        <ul id="taskList" class="task-list"></ul>
+      </div>
 
-    <button type="button" onclick="press('4')">4</button>
-    <button type="button" onclick="press('5')">5</button>
-    <button type="button" onclick="press('6')">6</button>
-    <button type="button" onclick="press('*')">*</button>
+      <!-- Taschenrechner -->
+      <div class="card calculator-card">
+        <h2>Taschenrechner</h2>
 
-    <button type="button" onclick="press('1')">1</button>
-    <button type="button" onclick="press('2')">2</button>
-    <button type="button" onclick="press('3')">3</button>
-    <button type="button" onclick="press('-')">-</button>
+        <input type="text" id="calcDisplay" readonly class="calc-display">
 
-    <button type="button" onclick="press('0')">0</button>
-    <button type="button" onclick="press('.')">.</button>
-    <button type="button" onclick="clearCalc()">C</button>
-    <button type="button" onclick="calculate()">=</button>
-  </div>
-</div>
+        <div class="calc-grid">
+          <button type="button" onclick="press('7')">7</button>
+          <button type="button" onclick="press('8')">8</button>
+          <button type="button" onclick="press('9')">9</button>
+          <button type="button" onclick="press('/')">/</button>
 
+          <button type="button" onclick="press('4')">4</button>
+          <button type="button" onclick="press('5')">5</button>
+          <button type="button" onclick="press('6')">6</button>
+          <button type="button" onclick="press('*')">*</button>
+
+          <button type="button" onclick="press('1')">1</button>
+          <button type="button" onclick="press('2')">2</button>
+          <button type="button" onclick="press('3')">3</button>
+          <button type="button" onclick="press('-')">-</button>
+
+          <button type="button" onclick="press('0')">0</button>
+          <button type="button" onclick="press('.')">.</button>
+          <button type="button" onclick="clearCalc()">C</button>
+          <button type="button" onclick="calculate()">=</button>
+        </div>
+      </div>
+
+      <!-- React-Projekt Bereich -->
+      <div class="react-info-card">
+        <h2>React-Projekt starten</h2>
+        <p class="intro-text">
+          Damit dieses Projekt vollständig funktioniert, muss zuerst das Backend lokal heruntergeladen
+          und gestartet werden. Lies bitte die Schritte kurz durch und bestätige danach, dass du alles gelesen hast.
+        </p>
+
+        <div class="react-steps">
+          <div class="react-step">
+            <div class="react-step-number">1</div>
+            <div class="react-step-content">
+              <strong>Backend herunterladen oder pullen</strong>
+              <p>
+                Repository:
+                <a class="text-link" href="https://github.com/FionnLaesser/Casino-Webapp-Backend-API" target="_blank" rel="noopener noreferrer">
+                  Casino-Webapp-Backend-API
+                </a>
+              </p>
+
+              <div class="button-row">
+                <a
+                  href="https://github.com/FionnLaesser/Casino-Webapp-Backend-API"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="small-action-btn github-btn"
+                >
+                  GitHub Repository
+                </a>
+
+                <a
+                  href="https://github.com/FionnLaesser/Casino-Webapp-Backend-API/archive/refs/heads/main.zip"
+                  class="small-action-btn download-btn"
+                >
+                  Backend herunterladen (ZIP)
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="react-step">
+            <div class="react-step-number">2</div>
+            <div class="react-step-content">
+              <strong>Backend im Projektordner starten</strong>
+              <p>Starte danach das Backend mit folgendem Befehl:</p>
+              <div class="command-box"><code>docker compose up -d</code></div>
+            </div>
+          </div>
+
+          <div class="react-step">
+            <div class="react-step-number">3</div>
+            <div class="react-step-content">
+              <strong>Danach die React-Seite öffnen</strong>
+              <p>Der Link erscheint erst nach deiner Bestätigung.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="confirmation-box">
+          <label class="confirmation-label">
+            <input type="checkbox" id="requirementsCheck" onchange="toggleReactProjectLink()">
+            Ich bestätige, dass ich die Anforderungen gelesen habe und das Backend lokal gestartet habe.
+          </label>
+
+          <div id="reactProjectLinkBox" class="reactProjectLinkBox">
+            <a
+              href="https://react.fionn-laesser.ch"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="react-launch-btn"
+            >
+              Zur React-Seite
+            </a>
+            <div class="success-note">
+              Super – jetzt kannst du das Projekt öffnen.
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -105,5 +398,20 @@
   <script src="javascripts/react.js"></script>
   <script src="javascripts/counter.js"></script>
   <script src="javascripts/calc.js"></script>
+
+  <script>
+    function toggleReactProjectLink() {
+      const checkbox = document.getElementById("requirementsCheck");
+      const linkBox = document.getElementById("reactProjectLinkBox");
+
+      if (checkbox.checked) {
+        linkBox.style.display = "block";
+      } else {
+        linkBox.style.display = "none";
+      }
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
